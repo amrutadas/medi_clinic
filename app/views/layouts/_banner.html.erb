@@ -1,0 +1,26 @@
+  <div class="header">
+        <div id="logo"><a href="index.html"><img src="/images/logo.png" alt="" title="" width="162" height="54" border="0" /></a></div>
+
+        <div class="right_header">
+
+          <div class="top_menu">
+          </div>
+
+          <div id="menu">
+            <ul>
+              <li><a href="/home/index" title="">Home</a></li>
+              <li><a href="/home/about_us" title="">About Us</a></li>
+              <%if current_user.role == 'admin'%>
+              <li><%= link_to "Patient Info", patient_masters_path%></li>
+              <%end%>
+              <%unless current_user.nil? %>
+              <%if current_user.role == 'admin'%>
+              <li><%= link_to "Admin", users_path %></li>
+              <%end%>
+              <%end%>
+             </ul>
+          </div>
+
+        </div>
+
+      </div>

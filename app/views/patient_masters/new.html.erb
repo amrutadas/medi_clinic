@@ -1,0 +1,13 @@
+<%= form_for(PatientMaster.new) do |f| %>
+  Name: <%= f.text_field :name %><br/>
+  Age : <%= f.number_field :age %><br/>
+  Sex :<%= f.select :sex, [['Male', 1], ['Female', 2]] %><br/>
+  Email : <%= f.email_field :email %><br/>
+  Landline : <%= f.telephone_field :land_line %><br/>
+  Mobile : <%= f.telephone_field :mobile %><br/>
+  Location: <%= f.text_field :location %><br/>
+  Detailed Address : <%= f.text_area :detailed_address, :rows=>3, :cols=>20 %><br/>
+  Record Created By : <%= f.text_field :created_by, :value => current_user.email, :disabled =>true %><br/>
+  <%= f.hidden_field :created_by, :value => current_user.email %>
+<%=f.submit%>
+<% end %>

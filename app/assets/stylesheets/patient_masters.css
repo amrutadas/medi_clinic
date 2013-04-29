@@ -1,0 +1,54 @@
+
+blue_tr
+{
+	height: 24px;
+	color: #333;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 4px 0px 0px 30px;
+	background-color: #d8e0e5;
+	border: 1px solid #ccc;
+}
+.lightblue_tr
+{
+	height: 24px;
+	color: #333;
+	font-size: 0.9em;
+	font-weight: normal;
+	padding: 4px 0px 0px 30px;
+	background-color: #f8f7f4;
+}
+.white_tr
+{
+	height: 24px;
+	color: #333;
+	font-size: 0.9em;
+	font-weight: normal;
+	padding: 4px 0px 0px 30px;
+	background-color: #fff;
+}
+
+.lightblue_tr a
+{
+	text-decoration:none;
+}
+.lightblue_tr a:hover
+{
+	text-decoration:underline;
+}
+.lightblue_tr a:visited
+{
+	text-decoration:none;
+}
+.white_tr a
+{
+	text-decoration:none;
+}
+.white_tr a:hover
+{
+	text-decoration:underline;
+}
+.white_tr a:visited
+{
+	text-decoration:none;
+}

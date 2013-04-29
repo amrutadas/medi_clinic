@@ -1,0 +1,44 @@
+<div class="clear"></div>
+  <div style="margin-right:10px;float: right">
+        <%= will_paginate @patient_master, :container => false %>
+ </div>
+<div class="clear"></div>
+
+<table class="box_table" width="100%">
+        <tbody>
+          <tr class="blue_tr">
+            <td width="10%">ID </td>
+            <td width="10%">Name</td>
+            <td width="5%">Age</td>
+            <td width="5%">Sex</td>
+            <td width="10%">Email</td>
+            <td width="10%">Mobile</td>
+            <td width="10%">Land Line</td>
+            <td width="10%">Location</td>
+            <td width="15%">Detailed Address</td>
+            <td width="10%">Created By</td>
+            <td width="5%">Created AT</td>
+
+          </tr>
+<% @patient_master.each do |user| %>
+            <tr class="<%= cycle("lightblue_tr", "white_tr")%>">
+             <td width="10%"><%= user.id %></td>
+             <td width="10%"><%= user.name %></td>
+             <td width="5%"><%= user.age %></td>
+             <%if user.sex.to_s  == 1.to_s %>
+             <td width="5%">Male</td>
+             <%elsif %>
+             <td width="5%">Female</td>
+             <%end%>
+             <td width="10%"><%= user.email %></td>
+             <td width="10%"><%= user.mobile %></td>
+             <td width="10%"><%= user.land_line %></td>
+             <td width="10%"><%= user.location %></td>
+             <td width="15%"><%= user.detailed_address %></td>
+             <td width="10%"><%= user.created_by %></td>
+             <td width="5%"><%= user.created_at %></td>
+            </tr>
+          <% end %>
+            </tbody>
+      </table>
+

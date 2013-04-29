@@ -1,0 +1,35 @@
+<h2> The New Patient Details have been stored successfully</h2>
+<div class="clear"></div>
+<h4>Following are the details Entered </h4>
+
+
+<table class="box_table" width="100%">
+        <tbody>
+          <tr class="blue_tr">
+            <td width="10%">ID </td>
+            <td width="10%">Name</td>
+            <td width="5%">Age</td>
+            <td width="5%">Sex</td>
+            <td width="10%">Email</td>
+            <td width="10%">Mobile</td>
+            <td width="10%">Land Line</td>
+            <td width="10%">Location</td>
+            <td width="15%">Detailed Address</td>
+            <td width="10%">Created By</td>
+            <td width="5%">Created AT</td>
+          </tr>
+            <tr class="<%= cycle("lightblue_tr", "white_tr")%>">
+             <td width="10%"><%= @patient_master.id %></td>
+             <td width="10%"><%= @patient_master.name %></td>
+             <td width="5%"><%= @patient_master.age %></td>
+             <td width="5%"><%= @patient_master.sex %></td>
+             <td width="10%"><%= @patient_master.email %></td>
+             <td width="10%"><%= @patient_master.mobile %></td>
+             <td width="10%"><%= @patient_master.land_line %></td>
+             <td width="10%"><%= @patient_master.location %></td>
+             <td width="15%"><%= @patient_master.detailed_address %></td>
+             <td width="10%"><%= @patient_master.created_by %></td>
+             <td width="5%"><%= @patient_master.created_at %></td>
+            </tr>
+            </tbody>
+      </table>

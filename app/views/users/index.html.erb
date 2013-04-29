@@ -1,0 +1,28 @@
+<table class="box_table" width="100%">
+        <tbody>
+          <tr class="blue_tr">
+            <td width="5%"></td>
+            <td width="30%">Name </td>
+            <td width="10%">Role</td>
+            <td width="45%">Delete User</td>
+          </tr>
+<% @users.each do |user| %>
+            <tr class="<%= cycle("lightblue_tr", "white_tr")%>">
+              <td width="5%"></td>
+              <td width="30%"><%= user.email %></td>
+              <td width="10%"><%= user.role %></td>
+              <td width="45%">
+                <% if user.id == current_user.id %>
+                  &nbsp;
+                <% else %>
+                  <%= button_to 'Delete This User', user, :method => :delete , :class => "btn", :confirm => "Are you sure?", :disable_with => 'deleting...' %>
+    <%#= link_to 'Delete This User', user, :confirm => 'Are you sure?', :method => :delete %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+            </tbody>
+      </table>
+ <div style="padding-bottom:20px; padding-top:5px; padding-left:45px;">
+        <%= button_to "Click To Add New User", new_user_path, :method => "get" ,:class =>"btn btn_blue"%>
+      </div>

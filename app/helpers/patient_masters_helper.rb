@@ -1,0 +1,2 @@
+module PatientMastersHelper
+end
