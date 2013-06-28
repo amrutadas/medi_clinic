@@ -12,6 +12,7 @@ gem 'ruby-oci8'
 gem 'json'
 gem 'jquery-rails'
 gem 'devise'
+gem 'fastercsv'
 #gem 'nifty-generators'
 #gem "audited", "~> 3.0.0.rc1"
 #gem 'acts_as_audited'

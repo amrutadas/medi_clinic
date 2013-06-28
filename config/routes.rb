@@ -12,6 +12,12 @@ root :to => 'home#index'
 resources :users
 resources :patient_masters, :except => :show
 match '/show_all_patient' => 'patient_masters#show', :as => 'show_all_patient'
+match '/patient_masters/each_patient' => 'patient_masters#each_patient', :as => 'each_patient'
+match '/patient_masters/export_to_csv', :to => 'patient_masters#export_to_csv', :as => 'export_to_csv'
+  #resources :patient_masters do
+   # post 'export_to_csv'
+    #match '/import_csv/:id' => 'lists#import_csv', :as => :import_csv
+  #end
 
 #resources :patient_masters do
  #   collection do

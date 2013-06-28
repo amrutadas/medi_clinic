@@ -70,13 +70,13 @@ list-style:none;padding:0px;margin:0px;display:block; font-weight:bold;
 list-style:none;display:inline;float:left;width:96px;height:35px;padding:0px;line-height:35px;font-size:13px;margin:0 3px 0 3px;
 }
 #menu ul li a{
-height:35px; width:96px;float:left;text-decoration:none;padding:0px;margin:0px;color:#6c7b83;text-align:center; background:url(images/menu_bt.gif) no-repeat center;
+height:35px; width:96px;float:left;text-decoration:none;padding:0px;margin:0px;color:#6c7b83;text-align:center; background:url(/images/menu_bt.gif) no-repeat center;
 }
 #menu ul li a:hover{
 height:35px;width:96px;text-decoration:none;color: #68C2EF;
 }
 #menu ul li a.current{
-height:35px;width:96px;float:left;text-decoration:none;padding:0px;margin:0px;color: #68C2EF;background:url(images/menu_bt.gif) no-repeat center;
+height:35px;width:96px;float:left;text-decoration:none;padding:0px;margin:0px;color: #68C2EF;background:url(/images/menu_bt.gif) no-repeat center;
 }
 
 #middle_box{

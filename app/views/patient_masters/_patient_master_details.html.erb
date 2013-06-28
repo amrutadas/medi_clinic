@@ -1,4 +1,8 @@
 <div class="clear"></div>
+<div style="margin-right:10px;float: left">
+        <%=  link_to 'Click to Downloand Records', export_to_csv_path(:patient_master => @patient_master), :format => :csv  %>
+ </div>
+
   <div style="margin-right:10px;float: right">
         <%= will_paginate @patient_master, :container => false %>
  </div>
@@ -22,7 +26,7 @@
           </tr>
 <% @patient_master.each do |user| %>
             <tr class="<%= cycle("lightblue_tr", "white_tr")%>">
-             <td width="10%"><%= user.id %></td>
+             <td width="10%"><%= link_to user.id, each_patient_path(:id=>user.id) %></td>
              <td width="10%"><%= user.name %></td>
              <td width="5%"><%= user.age %></td>
              <%if user.sex.to_s  == 1.to_s %>
@@ -36,7 +40,8 @@
              <td width="10%"><%= user.location %></td>
              <td width="15%"><%= user.detailed_address %></td>
              <td width="10%"><%= user.created_by %></td>
-             <td width="5%"><%= user.created_at %></td>
+             <!--td width="5%"><!%= truncate(user.created_at .to_s,:length=>15)%></td-->
+             <td width="5%"><%= user.created_at.to_date%></td>
             </tr>
           <% end %>
             </tbody>

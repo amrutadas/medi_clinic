@@ -1,0 +1,56 @@
+<h4>Please Enter the desired Patient Id to see all the patient Details</h4>
+<%= form_tag each_patient_path, :method => 'get' do %>
+<table>
+  <tr width="20%"></tr>
+  <tr width="60%">
+   <input type="text" id="id" name="id" class="tbox" style="width:183px;float:left;margin-top:18px;margin-left:20px"/><br/>
+ </tr>
+  <tr width="20%">
+     <%= submit_tag "Search" %>
+  </tr>
+</table>
+<%end%>
+<%if @patient.nil?%>
+<div class="clear"></div>
+<%else%>
+<table class="box_table" width="80%">
+  <tbody>
+  <tr>
+    <td width="20%"></td>
+    <td width="25%">Name: <%= @patient.name %></td>
+    <td width="10%"></td>
+    <td width="25%">Age : <%=@patient.age %></td>
+    <td width="20%"></td>
+  </tr>
+  <tr>
+    <td width="20%"></td>
+    <td width="25%">Sex :<% if @patient.sex.to_s =='1'%> <%= "Male"%> <%else%> <%="Female"%> <%end %></td>
+    <td width="10%"></td>
+    <td width="25%">Email : <%= @patient.email %></td>
+    <td width="20%"></td>
+  </tr>
+  <tr>
+    <td width="20%"></td>
+    <td width="25%">Landline : <%= @patient.land_line %></td>
+    <td width="10%"></td>
+    <td width="25%">Mobile : <%= @patient.mobile %></td>
+    <td width="20%"></td>
+  </tr>
+  <tr>
+    <td width="20%"></td>
+    <td width="25%">Location: <%= @patient.location %></td>
+    <td width="10%"></td>
+    <td width="25%"> Detailed Address : <%=  @patient.detailed_address %></td>
+    <td width="20%"></td>
+  </tr>
+  <tr>
+    <td width="20%"></td>
+    <td width="25%">Record Created By : <%=@patient.created_by %></td>
+    <td width="10%"></td>
+    <td width="25%"></td>
+    <td width="20%"></td>
+    </tr>
+    
+  </tbody>
+</table>
+<%end%>

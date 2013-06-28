@@ -1,13 +1,50 @@
 <%= form_for(PatientMaster.new) do |f| %>
-  Name: <%= f.text_field :name %><br/>
-  Age : <%= f.number_field :age %><br/>
-  Sex :<%= f.select :sex, [['Male', 1], ['Female', 2]] %><br/>
-  Email : <%= f.email_field :email %><br/>
-  Landline : <%= f.telephone_field :land_line %><br/>
-  Mobile : <%= f.telephone_field :mobile %><br/>
-  Location: <%= f.text_field :location %><br/>
-  Detailed Address : <%= f.text_area :detailed_address, :rows=>3, :cols=>20 %><br/>
-  Record Created By : <%= f.text_field :created_by, :value => current_user.email, :disabled =>true %><br/>
-  <%= f.hidden_field :created_by, :value => current_user.email %>
-<%=f.submit%>
+<table class="box_table" width="80%">
+  <tbody>
+  <tr>
+    <td width="20%"></td>
+    <td width="25%">Name: <%= f.text_field :name %></td>
+    <td width="10%"></td>
+    <td width="25%">Age : <%= f.number_field :age %></td>
+    <td width="20%"></td>
+  </tr>
+  <tr>
+    <td width="20%"></td>
+    <td width="25%">Sex :<%= f.select :sex, [['Male', 1], ['Female', 2]] %></td>
+    <td width="10%"></td>
+    <td width="25%">Email : <%= f.email_field :email %></td>
+    <td width="20%"></td>
+  </tr>
+  <tr>
+    <td width="20%"></td>
+    <td width="25%">Landline : <%= f.telephone_field :land_line %></td>
+    <td width="10%"></td>
+    <td width="25%">Mobile : <%= f.telephone_field :mobile %></td>
+    <td width="20%"></td>
+  </tr>
+  <tr>
+    <td width="20%"></td>
+    <td width="25%">Location: <%= f.text_field :location %></td>
+    <td width="10%"></td>
+    <td width="25%"> Detailed Address : <%= f.text_area :detailed_address, :rows=>3, :cols=>20 %></td>
+    <td width="20%"></td>
+  </tr>
+  <tr>
+    <td width="20%"></td>
+    <td width="25%">Record Created By : <%= f.text_field :created_by, :value => current_user.email, :disabled =>true %>
+        <%= f.hidden_field :created_by, :value => current_user.email %>
+    </td>
+    <td width="10%"></td>
+    <td width="25%"></td>
+    <td width="20%"></td>
+    </tr>
+    <tr>
+    <td width="20%"></td>
+    <td width="25%"><%=f.submit%></td>
+    <td width="10%"></td>
+    <td width="25%"></td>
+    <td width="20%"></td>
+    </tr>
+  </tbody>
+</table>
 <% end %>

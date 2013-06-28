@@ -4,19 +4,20 @@
         <div class="right_header">
 
           <div class="top_menu">
+            <%unless current_user.nil? %>
+            <%= link_to "Sign Out", destroy_user_session_path, :class => "login", :style=> "float:right;"%>
+            <%end%>
           </div>
 
           <div id="menu">
             <ul>
               <li><a href="/home/index" title="">Home</a></li>
               <li><a href="/home/about_us" title="">About Us</a></li>
-              <%if current_user.role == 'admin'%>
-              <li><%= link_to "Patient Info", patient_masters_path%></li>
-              <%end%>
               <%unless current_user.nil? %>
-              <%if current_user.role == 'admin'%>
-              <li><%= link_to "Admin", users_path %></li>
-              <%end%>
+               <%if current_user.role == 'admin'%>
+                 <li><%= link_to "Patient Info", patient_masters_path%></li>
+                 <li><%= link_to "Admin", users_path %></li>
+               <%end%>
               <%end%>
              </ul>
           </div>
